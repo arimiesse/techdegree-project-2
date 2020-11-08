@@ -1,0 +1,146 @@
+/* ----------------------
+  Base Element Styles 
+---------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.8;
+    color: black;
+    margin: 10px;
+}
+
+p {
+
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+a {
+
+}
+
+ul {
+
+}
+
+li {
+
+}
+
+img {
+
+}
+
+figure {
+
+}
+
+/* ----------------------
+  Base Layout Styles 
+---------------------- */
+
+/* --- Main Navigation --- */
+
+.name {
+    color: black;
+    margin: 0;
+}
+
+.main-nav {
+    margin-top: 0;
+}
+
+    .name a,
+    .main-nav a {
+        display: block;
+        text-align: center;
+        color: black;
+    }
+
+    .main-nav a {
+
+    }
+
+    .main-nav a:hover {
+
+    }
+
+/* --- Layout Containers --- */
+
+,main-header {
+    padding-top: 5em;
+    margin: 0 100%;
+}
+
+
+
+
+
+
+/* --- Page Elements --- */
+
+
+
+
+
+
+
+
+/* ----------------------
+  Media Queries 
+---------------------- */
+
+@media (min-width: 768px) {
+
+    .body {
+        padding-top: 65px;
+    }
+
+    .main-header {
+        position: fixed;
+        background: #f3f3f3;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+    }
+
+    .name {
+        float: left;
+    }
+
+    .main-nav {
+        float: right;
+    }
+
+    .main-nav li {
+        display: inline-block;
+        margin: auto;
+        font-size: 1.2em;
+        padding: 30px 15px;
+    }
+
+
+
+    /* --- Float Clearfix --- */
+
+    .clearfix::after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+
+}
