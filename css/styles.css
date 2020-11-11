@@ -28,8 +28,9 @@ body {
     color: black;
     font-size: 1em;
     line-height: 1.2;
-    background: rgb(233, 234, 235);
+    background: rgba(255, 255, 255, 0);
     padding-top: 60px;
+    margin: 0 auto;
 }
 
 
@@ -39,17 +40,23 @@ p {
 }
 
 h1 {
-    font-weight: bold;
+    font-weight: bolder;
     margin: 0;
 }
 
 h2 {
-    font-weight: 700;
+    font-weight: bolder;
     text-transform: uppercase;
+    font-size: 1.2em;
 }
 
 h3 {
     font-weight: 500;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
 }
 
 a {
@@ -134,13 +141,34 @@ a:active {
     padding-bottom: 0;
 }
 
-main {
+.banner {
+    padding: 70px 0;
+    margin-bottom: 0;
+
+}
+
+.bio {
+
+}
+
+.profile-img {
+    width: 250px;
+}
+
+.portfolio,
+.skills {
     background: rgba(255, 255, 255, 0.589);
 }
 
-.skills,
-.contact {
-    background: rgb(233, 234, 235);
+
+.skills {
+
+}
+
+.banner,
+.contact,
+.main-footer {
+    background: rgb(248, 249, 250);
 }
 
 .banner,
@@ -149,11 +177,6 @@ main {
 .main-footer {
     color: darkslategrey;
     text-align: center;
-}
-
-.banner {
-    padding: em 0;
-    margin-bottom: 0;
 }
 
 
@@ -166,11 +189,12 @@ main {
     margin-bottom: 0;
 }
 
-main,
+.banner,
+.portfolio,
 .skills,
 .contact,
 .main-footer {
-    padding: 3em 0 0;
+    padding: 3em 0 2em;
     margin-top: 0;
 }
 
@@ -178,21 +202,33 @@ main,
     border-top: 2px solid rgba(160, 89, 160, 0.568);
 }
 
-.main-footer,
 .footer-nav-1 {
-    display: flex;
-    flex-direction: row;
+    
+}
+    .name,
+    .footer-nav-1 a {
+        display: inline-block;
+        padding: 5px 5px;
+    }
+
+    .main-nav-footer a {
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: normal;
+        font-size: 0.8em;
+        border-bottom: 2px solid rgb(210, 190, 221);
     }
 
 .main-footer h1 .name {
-      align-self: left;
+      float: left;
     }
 
 .footer-nav-1 {
+    float: right;
     align-content: right;
 }
 
-#footer-nav-2 {
+.main-nav-footer {
     display: none;
 }
 
@@ -256,6 +292,7 @@ main,
 
     .bio {
         font-size: 1.3em;
+        padding-right: 1em;
     }
 
     .profile-img {
