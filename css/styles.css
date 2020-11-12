@@ -1,6 +1,6 @@
-/* ===========================================
-             Web Fonts
-============================================== */
+/* ======================================================================================================================================
+                                                     Web Fonts
+====================================================================================================================================== */
 /* --- Source of font: https://fonts.google.com/specimen/Montserrat &
 https://google-webfonts-helper.herokuapp.com/fonts/montserrat?subsets=latin  --- */
 
@@ -14,29 +14,29 @@ https://google-webfonts-helper.herokuapp.com/fonts/montserrat?subsets=latin  ---
          url('../fonts/montserrat-v15-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
   }
 
-/* ===========================================
-             Base Element Styles
-============================================== */
+/* ======================================================================================================================================
+                                                     Base Element Styles
+====================================================================================================================================== */
 
 * {
     box-sizing: border-box;
-    text-align: center;
 }
 
 body {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    text-align: center;
     color: black;
     font-size: 1em;
     line-height: 1.2;
-    background: rgba(255, 255, 255, 0);
+    background: rgb(248, 249, 250);
     padding-top: 60px;
     margin: 0 auto;
 }
 
 
 p {
-    font-size: 0.9em;
-    margin-bottom: 1.6em;
+    font-size: 1.1em;
+    margin: 1em 1.4em 0;
 }
 
 h1 {
@@ -52,6 +52,7 @@ h2 {
 
 h3 {
     font-weight: 500;
+    margin-top: 1.2em;
 }
 
 ul {
@@ -67,10 +68,11 @@ img {
     max-width: 90%;
 }
 
-/* --- Pseudo-classes --- */
+/* ----------------------------------------------------- Pseudo-classes ---------------------------------------------------------------- */
 
 a:link {
     color:  rgb(166, 97, 212);
+    display: block;
 }
 
 a:visited {
@@ -85,11 +87,11 @@ a:active {
     color: rgb(194, 137, 127);
 }
 
-/* ===========================================
-              Base Layout Styles
-============================================== */
+/* ======================================================================================================================================
+                                                     Base Layout Styles
+====================================================================================================================================== */
 
-/* --- Main Navigation --- */
+/* ----------------------------------------------------- Main Navigation (Header) ---------------------------------------------------------------- */
 
 .main-header,
 .name,
@@ -133,80 +135,33 @@ a:active {
         border-bottom: 2px solid rgb(210, 190, 221);
     }
 
-   
-/* --- Layout Containers --- */
+/* ----------------------------------------------------- Main Navigation (Footer) ---------------------------------------------------------------- */
 
-.main-header {
-    padding-top: 0.6em;
-    padding-bottom: 0;
-}
-
-.banner {
-    padding: 70px 0;
-    margin-bottom: 0;
-
-}
-
-.bio {
-
-}
-
-.profile-img {
-    width: 250px;
-}
-
-.portfolio,
-.skills {
-    background: rgba(255, 255, 255, 0.589);
-}
-
-
-.skills {
-
-}
-
-.banner,
-.contact,
-.main-footer {
-    background: rgb(248, 249, 250);
-}
-
-.banner,
-.skills,
-.contact,
-.main-footer {
-    color: darkslategrey;
-    text-align: center;
-}
-
-
-.col {
-    padding-right: 1em;
-    padding-left: 1em;
-}
-
-.contact {
-    margin-bottom: 0;
-}
-
-.banner,
-.portfolio,
-.skills,
-.contact,
-.main-footer {
-    padding: 3em 0 2em;
-    margin-top: 0;
+.main-footer,
+.name-footer,
+.main-nav-footer {
+    display: flex;
+    flex-direction: row;
 }
 
 .main-footer {
-    border-top: 2px solid rgba(160, 89, 160, 0.568);
+    position: relative;
+    background: linear-gradient(rgb(255, 255, 255) 20%, rgb(209, 209, 209) 80%) ;
+    width: 100%;
+    bottom: 0;
+    z-index: 100;
 }
 
-.footer-nav-1 {
-    
+.name-footer {
+    align-self: left;
+    font-size: 1.2em;
+    color:  rgb(74, 6, 105);
+    font-weight: 800;
 }
-    .name,
-    .footer-nav-1 a {
+
+    .footer-nav-1 a,
+    .main-nav-footer a {
+        justify-content: space-between;
         display: inline-block;
         padding: 5px 5px;
     }
@@ -219,19 +174,89 @@ a:active {
         border-bottom: 2px solid rgb(210, 190, 221);
     }
 
-.main-footer h1 .name {
-      float: left;
+    .main-nav-footer a {
+        text-align: center;
+        display: block;
+        padding: 5px 5px;
     }
-
-.footer-nav-1 {
-    float: right;
-    align-content: right;
-}
 
 .main-nav-footer {
     display: none;
 }
 
+
+/* ----------------------------------------------------- Layout Containers ---------------------------------------------------------------- */
+
+.main-header {
+    padding-top: 0.6em;
+    padding-bottom: 0;
+}
+
+main {
+    padding-top: 75px;
+}
+
+.banner {
+    padding: 30px auto;
+    margin-bottom: 0;
+   }
+
+.bio {
+    display: block;
+    padding-right: 2em;
+    padding-left: 2em;
+    font-size: 1.1em;
+}
+
+.profile-img {
+    width: 300px;
+    display: block;
+    margin: 2em auto;
+}
+
+.portfolio,
+.skills {
+    background: rgba(255, 255, 255);
+}
+
+.banner,
+main,
+.contact,
+.main-footer {
+    background: rgb(248, 249, 250);
+}
+
+.banner,
+.skills,
+.contact,
+.main-footer {
+    color: darkslategrey;
+   
+}
+
+.col {
+    padding-right: 1em;
+    padding-left: 1em;
+    margin: 2em 0;
+}
+
+.contact {
+    margin-bottom: 0;
+}
+
+.banner,
+.portfolio,
+.skills,
+.contact,
+.main-footer {
+    padding: 2.5em 0 2.5em;
+    margin: 0 0.5em;
+}
+
+.main-footer {
+    border-top: 2px solid rgba(160, 89, 160, 0.568);
+    padding: 3em 3em;
+}
 
 /* ===========================================
                  Media Queries 
@@ -245,7 +270,9 @@ a:active {
     }
 
     main {
-        padding-top: 80px;
+        padding-top: 50px;
+        margin: 0 auto;
+        background:rgb(248, 249, 250);
     }
 
     img {
@@ -258,6 +285,7 @@ a:active {
 
     .name {
         padding-bottom: 15px;
+        align-self: center;
     }
 
     .col {
@@ -291,24 +319,37 @@ a:active {
     }
 
     .bio {
-        font-size: 1.3em;
-        padding-right: 1em;
+        font-size: 1.2em;
+        text-align: left;
+        padding: 3.5em 1.2em 2em 0.8em;
     }
 
     .profile-img {
         float: right;
+        width: 300px;
+        margin: 2em 1em;
+    }
+
+    .container footer {
+        width: 100%;
+        margin: 0 auto;
+        background: rgb(248, 249, 250);
     }
 
     .main-footer {
-        margin-bottom: 70px;
+        padding-bottom: 70px;
     }
 
-    #footer-nav-2 {
-        justify-content: right;
+    .name-footer {
+        align-self: left;
     }
 
     .footer-nav-1 {
         display: none;
+    }
+
+    .main-nav-footer {
+       float: right;
     }
 
     /* --- Float Clearfix --- */
@@ -323,21 +364,36 @@ a:active {
 
 @media (min-width: 1024px) {
 
-    header .container {
-        width: 100%;
-        padding-left: 0;
+    body {
+        padding-top: 5px;
     }
-   
+
+    .name,
+    .main-nav {
+        flex-direction: row;
+        justify-content: space-around;
+        display: inline-block;
+    }
+
+    .name {
+        text-align: left;
+    }
+
+    .profile-img {
+        width: 400px;
+    }
+
     img {
         max-width: 98%;
     }
 
-    .container {
-        width: 80%;
-        max-width: 1150px;
+    .container,
+    .skills {
+        width: 100%;
+        max-width: 1140px;
     }
     
     .col {
-        width: 33%;
+        width: 33.333%;
     }
 
