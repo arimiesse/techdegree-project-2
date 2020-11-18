@@ -136,7 +136,6 @@ a:active {
 }
 
 .name-footer {
-    display: inline-block;
     float: left;
     text-align: left;
     font-size: 16px;
@@ -345,7 +344,6 @@ a:active {
     }
 
     .name {
-        display: inline-block;
         float: left;
         text-align: left;
         padding-top: 18px;
